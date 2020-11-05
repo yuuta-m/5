@@ -39,6 +39,7 @@ namespace Lib_7
                 value2 = 10;
                 value3 = 10;
             }
+
             //Увеличение значений на 10
             public void SetParams()
             {

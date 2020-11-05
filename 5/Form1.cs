@@ -205,8 +205,8 @@ namespace _5
             rezTriad2Value3.Clear();
             n.Clear();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        //Вывод при загрузке значений по умолчанию
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             rezTriad1Value1.Text = triad1.value1.ToString();
             rezTriad1Value2.Text = triad1.value2.ToString();
