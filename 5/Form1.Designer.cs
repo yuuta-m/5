@@ -253,6 +253,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "Очистить";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.очиститьТриаду2ToolStripMenuItem_Click);
             // 
             // button7
             // 
@@ -262,6 +263,7 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "Задать автоматически";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.задатьЧислаТриады2АвтоматическиToolStripMenuItem_Click);
             // 
             // button8
             // 
@@ -271,6 +273,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "Задать";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.задатьЧисло3Триады2ToolStripMenuItem_Click);
             // 
             // button9
             // 
@@ -280,6 +283,7 @@
             this.button9.TabIndex = 7;
             this.button9.Text = "Задать";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.задатьЧисло2Триады2ToolStripMenuItem_Click);
             // 
             // button10
             // 
@@ -289,6 +293,7 @@
             this.button10.TabIndex = 6;
             this.button10.Text = "Задать";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.задатьЧисло1Триады2ToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -361,6 +366,7 @@
             this.button14.TabIndex = 17;
             this.button14.Text = "Очистить всё";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.очиститьВсёToolStripMenuItem_Click);
             // 
             // label10
             // 
@@ -379,6 +385,7 @@
             this.button12.TabIndex = 15;
             this.button12.Text = "Увеличить числа на n";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.увеличитьЧислаНаNToolStripMenuItem_Click);
             // 
             // button11
             // 
@@ -388,6 +395,7 @@
             this.button11.TabIndex = 11;
             this.button11.Text = "Сравнить триады";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.сравнитьТриадыToolStripMenuItem_Click);
             // 
             // n
             // 
@@ -404,6 +412,7 @@
             this.button13.TabIndex = 13;
             this.button13.Text = "Увеличить числа на 10";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.увеличитьЧислаНа10ToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -433,6 +442,7 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "Очистить";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.очиститьТриаду1ToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -442,6 +452,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Задать автоматически";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.задатьЧислаТриады1АвтоматическиToolStripMenuItem_Click);
             // 
             // button3
             // 
@@ -451,6 +462,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Задать";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.задатьЧисло3Триады1ToolStripMenuItem_Click);
             // 
             // button2
             // 
@@ -460,6 +472,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Задать";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.задатьЧисло2Триады1ToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -469,6 +482,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Задать";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.задатьЧисло1Триады1ToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -563,78 +577,91 @@
             this.задатьЧисло2Триады1ToolStripMenuItem.Name = "задатьЧисло2Триады1ToolStripMenuItem";
             this.задатьЧисло2Триады1ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧисло2Триады1ToolStripMenuItem.Text = "Задать число №2 триады №1";
+            this.задатьЧисло2Триады1ToolStripMenuItem.Click += new System.EventHandler(this.задатьЧисло2Триады1ToolStripMenuItem_Click);
             // 
             // задатьЧисло3Триады1ToolStripMenuItem
             // 
             this.задатьЧисло3Триады1ToolStripMenuItem.Name = "задатьЧисло3Триады1ToolStripMenuItem";
             this.задатьЧисло3Триады1ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧисло3Триады1ToolStripMenuItem.Text = "Задать число №3 триады №1";
+            this.задатьЧисло3Триады1ToolStripMenuItem.Click += new System.EventHandler(this.задатьЧисло3Триады1ToolStripMenuItem_Click);
             // 
             // задатьЧисло1Триады2ToolStripMenuItem
             // 
             this.задатьЧисло1Триады2ToolStripMenuItem.Name = "задатьЧисло1Триады2ToolStripMenuItem";
             this.задатьЧисло1Триады2ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧисло1Триады2ToolStripMenuItem.Text = "Задать число №1 триады №2";
+            this.задатьЧисло1Триады2ToolStripMenuItem.Click += new System.EventHandler(this.задатьЧисло1Триады2ToolStripMenuItem_Click);
             // 
             // задатьЧисло2Триады2ToolStripMenuItem
             // 
             this.задатьЧисло2Триады2ToolStripMenuItem.Name = "задатьЧисло2Триады2ToolStripMenuItem";
             this.задатьЧисло2Триады2ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧисло2Триады2ToolStripMenuItem.Text = "Задать число №2 триады №2";
+            this.задатьЧисло2Триады2ToolStripMenuItem.Click += new System.EventHandler(this.задатьЧисло2Триады2ToolStripMenuItem_Click);
             // 
             // задатьЧисло3Триады2ToolStripMenuItem
             // 
             this.задатьЧисло3Триады2ToolStripMenuItem.Name = "задатьЧисло3Триады2ToolStripMenuItem";
             this.задатьЧисло3Триады2ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧисло3Триады2ToolStripMenuItem.Text = "Задать число №3 триады №2";
+            this.задатьЧисло3Триады2ToolStripMenuItem.Click += new System.EventHandler(this.задатьЧисло3Триады2ToolStripMenuItem_Click);
             // 
             // задатьЧислаТриады1АвтоматическиToolStripMenuItem
             // 
             this.задатьЧислаТриады1АвтоматическиToolStripMenuItem.Name = "задатьЧислаТриады1АвтоматическиToolStripMenuItem";
             this.задатьЧислаТриады1АвтоматическиToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧислаТриады1АвтоматическиToolStripMenuItem.Text = "Задать числа триады №1 автоматически";
+            this.задатьЧислаТриады1АвтоматическиToolStripMenuItem.Click += new System.EventHandler(this.задатьЧислаТриады1АвтоматическиToolStripMenuItem_Click);
             // 
             // задатьЧислаТриады2АвтоматическиToolStripMenuItem
             // 
             this.задатьЧислаТриады2АвтоматическиToolStripMenuItem.Name = "задатьЧислаТриады2АвтоматическиToolStripMenuItem";
             this.задатьЧислаТриады2АвтоматическиToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.задатьЧислаТриады2АвтоматическиToolStripMenuItem.Text = "Задать числа триады №2 автоматически ";
+            this.задатьЧислаТриады2АвтоматическиToolStripMenuItem.Click += new System.EventHandler(this.задатьЧислаТриады2АвтоматическиToolStripMenuItem_Click);
             // 
             // очиститьТриаду1ToolStripMenuItem
             // 
             this.очиститьТриаду1ToolStripMenuItem.Name = "очиститьТриаду1ToolStripMenuItem";
             this.очиститьТриаду1ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.очиститьТриаду1ToolStripMenuItem.Text = "Очистить триаду №1";
+            this.очиститьТриаду1ToolStripMenuItem.Click += new System.EventHandler(this.очиститьТриаду1ToolStripMenuItem_Click);
             // 
             // очиститьТриаду2ToolStripMenuItem
             // 
             this.очиститьТриаду2ToolStripMenuItem.Name = "очиститьТриаду2ToolStripMenuItem";
             this.очиститьТриаду2ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.очиститьТриаду2ToolStripMenuItem.Text = "Очистить триаду №2";
+            this.очиститьТриаду2ToolStripMenuItem.Click += new System.EventHandler(this.очиститьТриаду2ToolStripMenuItem_Click);
             // 
             // очиститьВсёToolStripMenuItem
             // 
             this.очиститьВсёToolStripMenuItem.Name = "очиститьВсёToolStripMenuItem";
             this.очиститьВсёToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.очиститьВсёToolStripMenuItem.Text = "Очистить всё";
+            this.очиститьВсёToolStripMenuItem.Click += new System.EventHandler(this.очиститьВсёToolStripMenuItem_Click);
             // 
             // увеличитьЧислаНа10ToolStripMenuItem
             // 
             this.увеличитьЧислаНа10ToolStripMenuItem.Name = "увеличитьЧислаНа10ToolStripMenuItem";
             this.увеличитьЧислаНа10ToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.увеличитьЧислаНа10ToolStripMenuItem.Text = "Увеличить числа на 10";
+            this.увеличитьЧислаНа10ToolStripMenuItem.Click += new System.EventHandler(this.увеличитьЧислаНа10ToolStripMenuItem_Click);
             // 
             // увеличитьЧислаНаNToolStripMenuItem
             // 
             this.увеличитьЧислаНаNToolStripMenuItem.Name = "увеличитьЧислаНаNToolStripMenuItem";
             this.увеличитьЧислаНаNToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.увеличитьЧислаНаNToolStripMenuItem.Text = "Увеличить числа на N";
+            this.увеличитьЧислаНаNToolStripMenuItem.Click += new System.EventHandler(this.увеличитьЧислаНаNToolStripMenuItem_Click);
             // 
             // сравнитьТриадыToolStripMenuItem
             // 
             this.сравнитьТриадыToolStripMenuItem.Name = "сравнитьТриадыToolStripMenuItem";
             this.сравнитьТриадыToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.сравнитьТриадыToolStripMenuItem.Text = "Сравнить триады";
+            this.сравнитьТриадыToolStripMenuItem.Click += new System.EventHandler(this.сравнитьТриадыToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -662,6 +689,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Практическая работа 5";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
