@@ -146,7 +146,7 @@ namespace _5
         //Кнопка "Сравнить"
         private void сравнитьТриадыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (triad1.Compare(triad2))
+            if (triad1|triad2)
             {
                 MessageBox.Show("Триада №1 больше триады №2", "Результат сравнения");
             }
@@ -159,26 +159,26 @@ namespace _5
         //Кнопка "Увеличить на 10"
         private void увеличитьЧислаНа10ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            triad1.SetParams();
+            triad1++;
+            triad2++;
             rezTriad1Value1.Text = triad1.value1.ToString();
             rezTriad1Value2.Text = triad1.value2.ToString();
             rezTriad1Value3.Text = triad1.value3.ToString();
-            triad2.SetParams();
             rezTriad2Value1.Text = triad2.value1.ToString();
             rezTriad2Value2.Text = triad2.value2.ToString();
             rezTriad2Value3.Text = triad2.value3.ToString();
-
         }
+
         //Кнопка "Увеличить на N"
         private void увеличитьЧислаНаNToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Int32.TryParse(n.Text, out int N))
             {
-                triad1.SetParams(N);
+                triad1  = triad1 + N;
                 rezTriad1Value1.Text = triad1.value1.ToString();
                 rezTriad1Value2.Text = triad1.value2.ToString();
                 rezTriad1Value3.Text = triad1.value3.ToString();
-                triad2.SetParams(N);
+                triad2 = triad2 + N;
                 rezTriad2Value1.Text = triad2.value1.ToString();
                 rezTriad2Value2.Text = triad2.value2.ToString();
                 rezTriad2Value3.Text = triad2.value3.ToString();
