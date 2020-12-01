@@ -18,9 +18,9 @@ namespace _5
             InitializeComponent();
         }
 
-        //Создание объектов триад
-        private Triad triad1 = new Triad();
-        private Triad triad2 = new Triad();
+        //Создание объектов дат
+        Date date1 = new Date();
+        Date date2 = new Date();
 
         //Кнопка "Выход"
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,166 +30,79 @@ namespace _5
         //Кнопка "Справка"
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Практическая работа №5. Бороненкова Дария, гр.ИСП - 31.\n" +
-                "Задание: Создать класс Triad (тройка чисел). Создать необходимые методы и свойства. Определить метод сравнения триад.\n" +
-                "Создать перегруженные методы SetParams, для установки параметров объекта, в том числе увеличения всех чисел на 10",
+            MessageBox.Show("Практическая работа №7. Бороненкова Дария, гр.ИСП - 31.\n" +
+                "Задание: Использовать класс Triad (тройка чисел).\n" +
+                "Определить производный класс Date с полями: год, месяц и день.\n" +
+                "Определить полный набор методов сравнения дат. ",
                 "О программе");
         }
-        //Кнопка "Очистить триаду 1"
+        //Кнопка "Очистить дату 1"
         private void очиститьТриаду1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             triad1value1.Clear();
             triad1value2.Clear();
             triad1value3.Clear();
         }
-        //Кнопка "Очистить триаду 2"
+        //Кнопка "Очистить дату 2"
         private void очиститьТриаду2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             triad2value1.Clear();
             triad2value2.Clear();
             triad2value3.Clear();
         }
-        //Задание числа 1 триады 1 пользователем вручную
-        private void задатьЧисло1Триады1ToolStripMenuItem_Click(object sender, EventArgs e)
+        //Задание даты №1
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(triad1value1.Text, out int tr1val1))
+            if (Int32.TryParse(triad1value1.Text, out int d1) && Int32.TryParse(triad1value2.Text, out int m1) && Int32.TryParse(triad1value3.Text, out int y1))
             {
-                triad1.value1 = tr1val1;
-                rezTriad1Value1.Text = triad1.value1.ToString();
+                date1.Value1 = d1;
+                date1.Value2 = m1;
+                date1.Value3 = y1;
             }
             else
             {
                 MessageBox.Show("Введите число", "Ошибка");
             }
         }
-        //Задание числа 2 триады 1 пользователем вручную
-        private void задатьЧисло2Триады1ToolStripMenuItem_Click(object sender, EventArgs e)
+        //Задание даты №2
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(triad1value2.Text, out int tr1val2))
+            if (Int32.TryParse(triad2value1.Text, out int d2) && Int32.TryParse(triad2value2.Text, out int m2) && Int32.TryParse(triad2value3.Text, out int y2))
             {
-                triad1.value2 = tr1val2;
-                rezTriad1Value2.Text = triad1.value2.ToString();
+                date2.Value1 = d2;
+                date2.Value2 = m2;
+                date2.Value3 = y2;
             }
             else
             {
                 MessageBox.Show("Введите число", "Ошибка");
             }
         }
-        //Задание числа 3 триады 1 пользователем вручную
-        private void задатьЧисло3Триады1ToolStripMenuItem_Click(object sender, EventArgs e)
+        //Присваивание значений по умолчанию при первой загрузке программы
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if (Int32.TryParse(triad1value3.Text, out int tr1val3))
-            {
-                triad1.value3 = tr1val3;
-                rezTriad1Value3.Text = triad1.value3.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Введите число", "Ошибка");
-            }
-        }
-        //Задание числа 1 триады 2 пользователем вручную
-        private void задатьЧисло1Триады2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(triad2value1.Text, out int tr2val1))
-            {
-                triad2.value1 = tr2val1;
-                rezTriad2Value1.Text = triad2.value1.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Введите число", "Ошибка");
-            }
-        }
-        //Задание числа 2 триады 2 пользователем вручную
-        private void задатьЧисло2Триады2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(triad2value2.Text, out int tr2val2))
-            {
-                triad2.value2 = tr2val2;
-                rezTriad2Value2.Text = triad2.value2.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Введите число", "Ошибка");
-            }
-        }
-        //Задание числа 3 триады 2 пользователем вручную
-        private void задатьЧисло3Триады2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(triad2value3.Text, out int tr2val3))
-            {
-                triad2.value3 = tr2val3;
-                rezTriad2Value3.Text = triad2.value3.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Введите число", "Ошибка");
-            }
-        }
-        //Задание чисел триады 1 автоматически рандомно
-        private void задатьЧислаТриады1АвтоматическиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            triad1.Random();
-            rezTriad1Value1.Text = triad1.value1.ToString();
-            rezTriad1Value2.Text = triad1.value2.ToString();
-            rezTriad1Value3.Text = triad1.value3.ToString();
-        }
-        //Задание чисел триады 2 автоматически рандомно
-        private void задатьЧислаТриады2АвтоматическиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            triad2.Random();
-            rezTriad2Value1.Text = triad2.value1.ToString();
-            rezTriad2Value2.Text = triad2.value2.ToString();
-            rezTriad2Value3.Text = triad2.value3.ToString();
+            triad1value1.Text = date1.Value1.ToString();
+            triad1value2.Text = date1.Value2.ToString();
+            triad1value3.Text = date1.Value3.ToString();
         }
         //Кнопка "Сравнить"
         private void сравнитьТриадыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (triad1|triad2)
+            if (date1.Compare(date2) == 1)
             {
-                MessageBox.Show("Триада №1 больше триады №2", "Результат сравнения");
+                MessageBox.Show("Дата №1 больше даты №2", "Результат сравнения");
+            }
+            else if (date1.Compare(date2) == -1)
+            {
+                MessageBox.Show("Дата №1 меньше даты №2", "Результат сравнения");
             }
             else
             {
-                MessageBox.Show("Триада №2 больше триады №1", "Результат сравнения");
-            }
-
-        }
-        //Кнопка "Увеличить на 10"
-        private void увеличитьЧислаНа10ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            triad1++;
-            triad2++;
-            rezTriad1Value1.Text = triad1.value1.ToString();
-            rezTriad1Value2.Text = triad1.value2.ToString();
-            rezTriad1Value3.Text = triad1.value3.ToString();
-            rezTriad2Value1.Text = triad2.value1.ToString();
-            rezTriad2Value2.Text = triad2.value2.ToString();
-            rezTriad2Value3.Text = triad2.value3.ToString();
-        }
-
-        //Кнопка "Увеличить на N"
-        private void увеличитьЧислаНаNToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Int32.TryParse(n.Text, out int N))
-            {
-                triad1  = triad1 + N;
-                rezTriad1Value1.Text = triad1.value1.ToString();
-                rezTriad1Value2.Text = triad1.value2.ToString();
-                rezTriad1Value3.Text = triad1.value3.ToString();
-                triad2 = triad2 + N;
-                rezTriad2Value1.Text = triad2.value1.ToString();
-                rezTriad2Value2.Text = triad2.value2.ToString();
-                rezTriad2Value3.Text = triad2.value3.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Введите число", "Ошибка");
+                MessageBox.Show("Даты равны", "Результат сравнения");
             }
         }
-        //Очищение всех форм
-        private void очиститьВсёToolStripMenuItem_Click(object sender, EventArgs e)
+        //Кнопка "Очистить всё"
+        private void button14_Click(object sender, EventArgs e)
         {
             triad1value1.Clear();
             triad1value2.Clear();
@@ -197,23 +110,6 @@ namespace _5
             triad2value1.Clear();
             triad2value2.Clear();
             triad2value3.Clear();
-            rezTriad1Value1.Clear();
-            rezTriad1Value2.Clear();
-            rezTriad1Value3.Clear();
-            rezTriad2Value1.Clear();
-            rezTriad2Value2.Clear();
-            rezTriad2Value3.Clear();
-            n.Clear();
-        }
-        //Вывод при загрузке значений по умолчанию
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            rezTriad1Value1.Text = triad1.value1.ToString();
-            rezTriad1Value2.Text = triad1.value2.ToString();
-            rezTriad1Value3.Text = triad1.value3.ToString();
-            rezTriad2Value1.Text = triad2.value1.ToString();
-            rezTriad2Value2.Text = triad2.value2.ToString();
-            rezTriad2Value3.Text = triad2.value3.ToString();
         }
     }
 }
